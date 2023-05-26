@@ -1,0 +1,102 @@
+1. Write a Python program to get the Fibonacci series between 0 to 50?
+
+Note : The Fibonacci Sequence is the series of numbers :
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, ....
+
+Every next number is found by adding up the two numbers before it.
+
+Expected Output : 1 1 2 3 5 8 13 21 34
+
+The code initializes x to 0 and y to 1. It then enters a while loop that continues until the value of y less than or equal to 50.
+
+In each iteration of the loop, the code prints the current value of y and then updates the values of x and y. The value of y is assigned to x, and the value of x + y is assigned to y. This update ensures that the next number in the sequence is calculated by adding the two previous numbers.
+
+The loop stops after printing the number 34 because the next number, 55, is greater than 50.
+
+x, y = 0, 1            # Initialize x and y to 0 and 1, respectively, which are the first two numbers in the Fibonacci sequence.
+while x <= 50:         # Here x enters a while loop that continues until the value of x lessthan or equal 50.
+    print(x)           # Within each iteration of the loop, the code prints the value of x.
+    x, y = y, x + y    # The value of y is assigned to x, and the value of x + y is assigned to y 
+                       # The loop stops after printing the number 34 because the next number, 55, is greater than 50.
+                      
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+
+
+
+
+2. Write a Python program that accepts a word from the user and reverse it.
+Sample Test Case
+Input : Edyoda
+output: adoydE
+
+In this program, we take input from user using the input function and store it in the string variable.
+
+Next, we initialize an empty string reversed_string. Then, we use a for loop with the range function to iterate over the indices of the characters in the string in reverse order. Inside the loop, we concatenate each character from the string to the reversed_string string.
+
+Finally, we print the reversed string using the print function.
+
+word = input("Enter a word: ")            # Get input from the user.
+reversed_word = ""                        # We initialize an empty string reversed_string.
+for i in range(len(word)-1, -1, -1):      # Reverse the word using loops.
+    reversed_word += word[i]              # We concatenate each character from the string to the reversed_string string.
+print("Reversed word:", reversed_word)    # Print the reversed word.
+
+Enter a word: Edyoda
+Reversed word: adoydE
+
+
+
+
+
+3. Write a Python program to count the number of even and odd numbers from a series of numbers.
+Sample numbers : numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) 
+Expected Output :
+Number of even numbers : 4
+Number of odd numbers : 5
+
+In this program, we initialize two variables, even_count and odd_count, to keep track of the number of even and odd numbers, respectively. We also initialize an empty list series to store the user-input numbers.
+
+The user is prompted to enter the number of elements in the series (n), and then asked to enter each number individually. The numbers are appended to the series list. Inside the loop, we check if each number is even or odd using the % operator. If a number is divisible by 2 (i.e., the remainder of the division is 0), it is considered even and we increment even_count. Otherwise, it is considered odd and we increment odd_count.
+
+Finally, the program prints the counts of even and odd numbers.
+
+even_count = 0                                                # We initialize two variables, even_count and odd_count to 0
+odd_count = 0
+
+series = []                                                   # User enters the range of elements in the series (n).
+n = int(input("Enter the number of elements in the series: "))  
+for i in range(n):                                          # Here i enters a for loop that continues until the range of n given by user.
+    num = int(input("Enter a number: "))                    # Here user actually entering the elements and stored in variable.
+    series.append(num)                                      # We are adding variable and series.
+    if num % 2 == 0:                                        # We check if each number is even or odd using the % operator
+        even_count += 1                                     # If it is considered even then we increment even_count.
+    else:
+        odd_count += 1                                      # Else it is considered odd and we increment odd_count.
+
+print("Even numbers:", even_count)                          # Print the counts of even and odd numbers
+print("Odd numbers:", odd_count)
+
+Enter the number of elements in the series: 10
+Enter a number: 1
+Enter a number: 2
+Enter a number: 3
+Enter a number: 4
+Enter a number: 5
+Enter a number: 6
+Enter a number: 7
+Enter a number: 8
+Enter a number: 9
+Enter a number: 10
+Even numbers: 5
+Odd numbers: 5
+
