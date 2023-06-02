@@ -1,21 +1,30 @@
-Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples
+1. Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples
 
 Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
 Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
 
 
 def get_last_element(tuple):   # The get_last_element function takes a tuple as input and returns the last element of that tuple.
+
     return tuple[-1]  # It uses the indexing operator [-1] to access the last element.
 
 def sort_tuples(tuples):  # The sort_tuples function takes a list of tuples as input and returns a new list
-    return sorted(tuples, key=get_last_element)   # containing the tuples sorted in increasing order based on their last element.
-    # It uses the sorted function with the key parameter set to get_last_element.
-    # The key parameter specifies a function that takes an item from the iterable in this case, a tuple and returns a value that will be used for sorting.
- 
-tuples_list = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
-sorted_list = sort_tuples(tuples_list)
-print(sorted_list)
 
+    return sorted(tuples, key=get_last_element)   # containing the tuples sorted in increasing order based on their last element.
+
+        # It uses the sorted function with the key parameter set to get_last_element.
+
+        # The key parameter specifies a function that takes an item from the iterable in this case, a tuple and returns a value that will be used for sorting.
+ 
+tuples_list = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)] # Enter the list of tuples
+
+sorted_list = sort_tuples(tuples_list)  # Call the sort_tuples() function to sort the list of tuples
+
+print(sorted_list)  # Print the sorted list
+
+# output:
+
+[(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
 
 The get_last_element function takes a tuple as input and returns the last element of that tuple. 
 It uses the indexing operator [-1] to access the last element. 
@@ -33,3 +42,42 @@ Finally, the sorted list is printed using the print function, displaying the tup
 
 
 
+2. Write a Python program to print a dictionary whose keys should be the alphabet from a-z and the value should be corresponding ASCII values
+
+Sample Output : {'a': 97, 'b': 98, 'c': 99, 'd': 100, 'e': 101, 'f': 102, 'g': 103, 'h': 104, 'i': 105, 'j': 106, 'k': 107, 'l': 108, 
+                  'm': 109, 'n': 110, 'o': 111, 'p': 112, 'q': 113, 'r': 114, 's': 115, 't': 116, 'u': 117, 'v': 118, 'w': 119, 
+                    'x': 120, 'y': 121, 'z': 122}
+
+def create_alphabet_dictionary():
+
+    alphabet_dict = {}  # Initialize an empty dictionary
+    
+    for letter in range(ord('a'), ord('z') + 1):  # Iterate over the range of ASCII values for lowercase alphabets 'a' to 'z'
+        
+        character = chr(letter)  # Convert the current ASCII value to its corresponding character using chr()
+        
+        alphabet_dict[character] = letter  # Assign the character as the key and the ASCII value as the value in the dictionary
+
+        return alphabet_dict  # Return the completed dictionary
+
+alphabet_dictionary = create_alphabet_dictionary()  # Call the create_alphabet_dictionary() function to generate the dictionary
+
+print(alphabet_dictionary)  # Print the resulting dictionary
+
+# Output:
+
+{'a': 97, 'b': 98, 'c': 99, 'd': 100, 'e': 101, 'f': 102, 'g': 103, 'h': 104, 'i': 105, 'j': 106, 'k': 107, 'l': 108, 
+  'm': 109, 'n': 110, 'o': 111, 'p': 112, 'q': 113, 'r': 114, 's': 115, 't': 116, 'u': 117, 'v': 118, 'w': 119, 'x': 120, 
+   'y': 121, 'z': 122}
+
+The create_alphabet_dictionary() function is defined. This function is responsible for generating the dictionary with keys as alphabets from 'a' to 'z' and values as their corresponding ASCII values.
+Inside the function, an empty dictionary alphabet_dict is initialized using {}.
+The for loop iterates over the range of ASCII values for lowercase alphabets from the ASCII value of 'a' to the ASCII value of 'z' (inclusive).
+For each iteration, the ord('a') and ord('z') functions are used to obtain the ASCII values of the letters 'a' and 'z', respectively. The ord() function takes a character as an argument and returns the corresponding ASCII value.
+The loop assigns each ASCII value to the variable letter.
+Inside the loop, the chr(letter) function is used to convert the current ASCII value to its corresponding character. The chr() function takes an ASCII value as an argument and returns the character associated with that value.
+The chr(letter) value (the character) is used as the key, and the value letter (the ASCII value) is assigned to the dictionary alphabet_dict.
+Once the loop is finished, the alphabet_dict dictionary is complete, with keys as alphabets and values as their corresponding ASCII values.
+The alphabet_dict dictionary is then returned from the create_alphabet_dictionary() function.
+Finally, the returned dictionary is assigned to the variable alphabet_dictionary, and it is printed using print(alphabet_dictionary).
+The output of running this code will be a dictionary where each lowercase alphabet from 'a' to 'z' is a key, and its corresponding ASCII value is the associated value.
