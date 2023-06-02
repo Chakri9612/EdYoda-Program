@@ -1,0 +1,35 @@
+Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples
+
+Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+
+
+def get_last_element(tuple):   # The get_last_element function takes a tuple as input and returns the last element of that tuple.
+    return tuple[-1]  # It uses the indexing operator [-1] to access the last element.
+
+def sort_tuples(tuples):  # The sort_tuples function takes a list of tuples as input and returns a new list
+    return sorted(tuples, key=get_last_element)   # containing the tuples sorted in increasing order based on their last element.
+    # It uses the sorted function with the key parameter set to get_last_element.
+    # The key parameter specifies a function that takes an item from the iterable in this case, a tuple and returns a value that will be used for sorting.
+ 
+tuples_list = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+sorted_list = sort_tuples(tuples_list)
+print(sorted_list)
+
+
+The get_last_element function takes a tuple as input and returns the last element of that tuple. 
+It uses the indexing operator [-1] to access the last element. 
+This function acts as a helper function to extract the last element from each tuple.
+The sort_tuples function takes a list of tuples as input and returns a new list containing the tuples sorted in increasing order based on their last element. 
+It uses the sorted function with the key parameter set to get_last_element. 
+The key parameter specifies a function that takes an item from the iterable (in this case, a tuple) and returns a value that will be used for sorting. 
+By passing get_last_element as the key function, the sorting algorithm uses the last element of each tuple as the criterion for sorting.
+In the example usage, a list of tuples [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)] is created. 
+This list contains tuples with various values. The sort_tuples function is then called, passing this list as the argument. 
+The function sorts the list based on the last element of each tuple and returns a new sorted list.
+The sorted list is stored in the sorted_list variable. 
+Finally, the sorted list is printed using the print function, displaying the tuples sorted in increasing order based on their last element.
+
+
+
+
