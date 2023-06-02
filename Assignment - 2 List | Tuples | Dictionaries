@@ -81,3 +81,6 @@ Once the loop is finished, the alphabet_dict dictionary is complete, with keys a
 The alphabet_dict dictionary is then returned from the create_alphabet_dictionary() function.
 Finally, the returned dictionary is assigned to the variable alphabet_dictionary, and it is printed using print(alphabet_dictionary).
 The output of running this code will be a dictionary where each lowercase alphabet from 'a' to 'z' is a key, and its corresponding ASCII value is the associated value.
+
+
+
